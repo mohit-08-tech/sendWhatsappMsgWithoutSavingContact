@@ -100,6 +100,7 @@ input::-webkit-inner-spin-button {
     width:300px;
     padding: 15px;
     border: none;
+    outline:none;
     border-radius: 100px;
     cursor: pointer;
     text-align: center;
@@ -113,7 +114,9 @@ input::-webkit-inner-spin-button {
 }
 
 .card button:hover{
-    box-shadow: 0px 0px 4px 6px rgba(27, 233, 106, 0.63);
+    border: none;
+    outline: none;
+    box-shadow: 0px 0px 4px 3px rgba(121, 250, 170, 0.63);
 }
 
 .card .bottom-footer{
