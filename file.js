@@ -1,6 +1,6 @@
 function whatsappApi(){
     var phoneNumber = document.getElementById("phone").value;
-    if(phoneNumber.length<10 || phoneNumber.length>13){
+    if(phoneNumber.length!=10){
        document.getElementById("msg").innerText="*Please enter valid 10 digit mobile number";
     }
     else{
