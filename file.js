@@ -14,3 +14,13 @@ function whatsappApi(){
     }
     
 }
+document.addEventListener("keyup", function(event) {
+    if (event.keyCode === 13) {
+        whatsappApi();
+    }
+});
+
+const selectElement = document.querySelector('#phone');
+selectElement.addEventListener('input',function(){
+        document.getElementById("msg").innerText=' ';
+})
