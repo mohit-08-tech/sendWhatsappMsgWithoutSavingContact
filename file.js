@@ -6,7 +6,7 @@ function whatsappApi(){
     else{
         if (phoneNumber != null || phoneNumber!=undefined) 
         { 
-            window.location.href = "https://api.whatsapp.com/send?phone=" + phoneNumber; 
+            window.location.href = "https://api.whatsapp.com/send?phone=+91" + phoneNumber; 
         }
         else{
             document.getElementById("msg").innerText="Something went wrong. Please try again later";

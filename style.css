@@ -30,7 +30,7 @@ input::-webkit-inner-spin-button {
   transition: transform 1.1s;
 }
 .card:hover{
-    transform: scale(1.04);
+    transform: scaleY(1.03);
     box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 40px 5px;
 }
 
