@@ -1,12 +1,12 @@
 function whatsappApi(){
     var phoneNumber = document.getElementById("phone").value;
-    if(phoneNumber.length!=10){
+    if(phoneNumber.length!=10 || phoneNumber.length!= 13){
        document.getElementById("msg").innerText="*Please enter valid 10 digit mobile number";
     }
     else{
         if (phoneNumber != null || phoneNumber!=undefined) 
         { 
-            if(phoneNumber.length == 12)
+            if(phoneNumber.length == 13)
                 window.location.href = "https://api.whatsapp.com/send?phone=" + phoneNumber; 
             else
                  window.location.href = "https://api.whatsapp.com/send?phone=+91" + phoneNumber; 
