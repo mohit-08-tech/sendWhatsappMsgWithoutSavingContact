@@ -33,10 +33,7 @@ function whatsappApi(){
     }
 
     if(isMobile())
-    {
-alert("test mobile");
         window.open("https://api.whatsapp.com/send?phone=+91" + phoneNumber,'_blank'); 
-    }
     else
         window.open("https://api.whatsapp.com/send?phone=" + phoneNumber,'_blank'); 
 
