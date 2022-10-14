@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Whatsapp Contact</title>
     <link rel = "icon" href ="whatsapp.png" type = "image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -16,8 +17,7 @@
         </svg>
         </div>
         <div class="card-body">
-            <span id="msg"></span>
-        <input type="number"  placeholder="Enter phone number" id="phone"  maxlength="12"  oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" autocomplete="off">
+        <input type="text" placeholder="Enter phone number" id="phone" maxlength="13"  oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" autocomplete="off">
     </div> 
     <div class="card-footer">
         <button onclick="whatsappApi()" id="btn">Chat on whatsapp</button>
@@ -27,5 +27,7 @@
     </div>
       </div> 
 </body>
+<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 <script src="file.js"></script>
 </html>
