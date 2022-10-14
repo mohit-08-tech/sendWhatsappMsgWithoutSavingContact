@@ -20,14 +20,23 @@ function whatsappApi(){
     var phoneNumber = document.getElementById("phone").value;
 
     if(phoneNumber.length<10 || (phoneNumber === null || phoneNumber===undefined)){
-       toastr.error("Please enter valid 10 digit mobile number!");
-       return;
+        toastr.error("Please enter valid 10 digit mobile number!");
+        return;
     }
 
     if(phoneNumber.substring(0,3) == "+91")
         phoneNumber = phoneNumber.substring(3)
-        
-    window.open("https://api.whatsapp.com/send?phone=" + phoneNumber,'_blank'); 
+    
+    if(isNaN(phoneNumber)){
+        toastr.error("Please enter valid 10 digit mobile number!");
+        return;
+    }
+
+    if(isMobile())
+        window.open("https://api.whatsapp.com/send?phone=+91" + phoneNumber,'_blank'); 
+    else
+        window.open("https://api.whatsapp.com/send?phone=" + phoneNumber,'_blank'); 
+
 }
 document.addEventListener("keyup", function(event) {
     if (event.keyCode === 13) {
@@ -35,7 +44,6 @@ document.addEventListener("keyup", function(event) {
     }
 });
 
-const selectElement = document.querySelector('#phone');
-selectElement.addEventListener('input',function(){
-        document.getElementById("msg").innerText=' ';
-})
+function isMobile() {
+    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+  }
